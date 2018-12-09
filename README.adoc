@@ -1,0 +1,49 @@
+= Asciidoctor JATS
+Manuel Prinz <manuel@pinguinkiste.de>
+
+// Aliases:
+:project-name: Asciidoctor JATS
+:project-handle: asciidoctor-jats
+// URIs:
+:uri-asciidoctor: https://asciidoctor.org
+//:uri-gem: https://rubygems.org/gems/{project-handle}
+:uri-project: https://github.com/manuelprinz/{project-handle}
+:uri-project-repo: {uri-project}
+:uri-project-issues: {uri-project-repo}/issues
+//:uri-project-list: http://discuss.asciidoctor.org
+:uri-rvm: https://rvm.io
+
+{project-name} is extension for Asciidoctor that converts AsciiDoc documents to the Journal Article Tag Suite (JATS)
+ format.
+JATS is an XML format for scientific papers with a wide acceptance in life science journals and journal databases.
+
+[caption=Status]
+CAUTION: {project-name} is currently _in development_. It does little more than nothing.
+
+toc::[]
+
+== Contributing
+
+Bug reports and pull requests are welcome on GitHub at {uri-project}.
+
+[[resources,Links]]
+== Resources
+
+* https://github.com/asciidoctor/asciidoctor/issues/1792[GitHub issue]
+* https://jats.nlm.nih.gov/[JATS Homepage]
+* https://jats.nlm.nih.gov/publishing/tag-library/1.1/[Tag Specification, Version 1.1]
+* https://jats4r.org/[Jats for Reuse Project]
+
+== Authors
+
+{project-name} was written by https://github.com/manuelprinz[Manuel Prinz].
+//on behalf of the Asciidoctor Project.
+
+== Copyright
+
+Copyright (C) 2018 Manuel Prinz
+
+Free use of this software is granted under the terms of the MIT License.
+
+For the full text of the license, see the <<LICENSE#,LICENSE>> file.
+//Refer to the <<NOTICE#,NOTICE>> file for information about third-party Open Source software in use.
