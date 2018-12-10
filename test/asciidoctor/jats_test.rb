@@ -19,7 +19,7 @@ class Asciidoctor::JatsTest < Minitest::Test
     assert_equal actual, expected, 'Expected XML header'
   end
 
-  def test_that_a_paragraph_generates_a_body
+  def test_that_a_paragraph_generates_a_p_element
     xml = Asciidoctor.convert 'This is a paragraph.', backend: :jats
     actual = Nokogiri::XML(xml).to_s
     expected = "<?xml version=\"1.0\"?>\n<p>This is a paragraph.</p>\n"
