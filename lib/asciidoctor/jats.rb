@@ -9,6 +9,7 @@ module Asciidoctor
 
       def initialize(backend, opts = nil)
         super
+        outfilesuffix 'jats'
       end
 
       def convert(node, transform = nil, _opts = nil)
