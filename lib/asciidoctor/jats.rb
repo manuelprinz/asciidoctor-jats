@@ -48,6 +48,7 @@ module Asciidoctor
       def ulist(node)
         result = []
         result << '<list list-type="bullet">'
+        result << %(<title>#{node.title}</title>) if node.title?
         node.items.each do |item|
           result << '<list-item>'
           result << %(<p>#{item.text}</p>)

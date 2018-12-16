@@ -10,3 +10,17 @@
     <p>Bill Bryson</p>
   </list-item>
 </list>
+
+<!-- .with-title -->
+<list list-type="bullet">
+  <title>Writers</title>
+  <list-item>
+    <p>Edgar Allen Poe</p>
+  </list-item>
+  <list-item>
+    <p>Sheri S. Tepper</p>
+  </list-item>
+  <list-item>
+    <p>Bill Bryson</p>
+  </list-item>
+</list>
