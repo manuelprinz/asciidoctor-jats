@@ -18,3 +18,9 @@ There are several projects that output XML:
 * [x] Try using https://github.com/asciidoctor/asciidoctor-doctest[DocTest].
 ** [ ] How to output XML? -> HTML backend seems fine for now
 ** [ ] How to enable backend file extension?
+
+== Translation
+
+* Support for subtitle? -> supported in article meta-data
+* Is there an equivalent concept to Asciidoctor roles in JATS? How to convert those?
+** HTML converter converts to classes.
