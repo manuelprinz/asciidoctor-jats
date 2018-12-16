@@ -1,6 +1,6 @@
 = Asciidoctor JATS
 Manuel Prinz <manuel@pinguinkiste.de>
-
+:icons: font
 // Aliases:
 :project-name: Asciidoctor JATS
 :project-handle: asciidoctor-jats
@@ -17,10 +17,23 @@ Manuel Prinz <manuel@pinguinkiste.de>
  format.
 JATS is an XML format for scientific papers with a wide acceptance in life science journals and journal databases.
 
+The converter outputs XML compatible with the https://jats.nlm.nih.gov/articleauthoring/[Article Authoring Tag Set].
+Other tag sets, namely _Archiving and Interchange_ and _Journal Publishing_, are out of the scope of this project.
+
 [caption=Status]
 CAUTION: {project-name} is currently _in development_. It does little more than nothing.
 
 toc::[]
+
+== Goal
+
+The goal of this project is to support authors of (especially scientific) articles in writing by leveraging
+ Asciidoctor's easy to learn markup and the ability to output all kinds of formats that are relevant to their work.
+
+Documents in JATS can support the publishing process by providing a file format that is an accepted standard by
+ publishers.
+By Asciidoctor's philosophy to _separate content from form_ the article can be output to any format, allowing for a
+ higher re-use due to publishing the work in multiple formats.
 
 == Contributing
 
@@ -32,6 +45,7 @@ Bug reports and pull requests are welcome on GitHub at {uri-project}.
 * https://github.com/asciidoctor/asciidoctor/issues/1792[GitHub issue]
 * https://jats.nlm.nih.gov/[JATS Homepage]
 * https://jats.nlm.nih.gov/publishing/tag-library/1.1/[Tag Specification, Version 1.1]
+*  https://jats.nlm.nih.gov/articleauthoring/[Article Authoring Tag Set (aka "Orange Set")]
 * https://jats4r.org/[Jats for Reuse Project]
 * https://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/style.html[PMC Tagging Guidelines]
 
