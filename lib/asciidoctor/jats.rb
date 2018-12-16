@@ -26,11 +26,13 @@ module Asciidoctor
         result << %(<?xml version="1.0"?>)
         result << %(<#{root_tag_name}>)
         if node.header?
+          result << %(<front>)
           result << %(<article-meta>)
           result << %(<title-group>)
           result << %(<article-title>#{node.doctitle}</article-title>)
           result << %(</title-group>)
           result << %(</article-meta>)
+          result << %(</front>)
         end
         result << node.content if node.blocks?
         result << %(</#{root_tag_name}>)
