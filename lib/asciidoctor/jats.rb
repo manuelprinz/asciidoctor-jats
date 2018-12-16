@@ -26,7 +26,10 @@ module Asciidoctor
 
       (QUOTE_TAGS = {
         emphasis: 'italic',
-        strong: 'bold'
+        strong: 'bold',
+        monospaced: 'monospace',
+        superscript: 'sup',
+        subscript: 'sub'
       })
 
       def inline_quoted(node)

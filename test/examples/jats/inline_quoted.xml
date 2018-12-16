@@ -3,3 +3,12 @@
 
 <!-- .strong -->
 <bold>chunky bacon</bold>
+
+<!-- .monospaced -->
+<monospace>hello world!</monospace>
+
+<!-- .superscript -->
+<sup>super</sup>chunky bacon
+
+<!-- .subscript -->
+<sub>sub</sub>chunky bacon
