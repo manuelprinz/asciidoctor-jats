@@ -60,5 +60,5 @@ Copyright (C) 2018 Manuel Prinz
 
 Free use of this software is granted under the terms of the MIT License.
 
-For the full text of the license, see the <<LICENSE#,LICENSE>> file.
+For the full text of the license, see the <<LICENSE.adoc#,LICENSE>> file.
 //Refer to the <<NOTICE#,NOTICE>> file for information about third-party Open Source software in use.
