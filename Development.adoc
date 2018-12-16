@@ -1,0 +1,20 @@
+= Development
+:icons: font
+
+This documents contains notes for the development of the extension.
+
+== Similar projects
+
+There are several projects that output XML:
+
+* Asciidoctor DocBook Converter
+* https://github.com/asciidoctor/asciidoctor-mallard[asciidoctor/asciidoctor-mallard]
+* https://github.com/riboseinc/metanorma-iso[riboseinc/metanorma-iso]
+* https://github.com/riboseinc/metanorma-csd[riboseinc/metanorma-csd]
+* https://github.com/riboseinc/metanorma-rsd[riboseinc/metanorma-rsd]
+
+== Testing
+
+* [x] Try using https://github.com/asciidoctor/asciidoctor-doctest[DocTest].
+** [ ] How to output XML? -> HTML backend seems fine for now
+** [ ] How to enable backend file extension?
