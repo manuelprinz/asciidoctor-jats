@@ -17,6 +17,12 @@ class XmlValidationTest < Minitest::Test
     assert_empty schema.validate(document)
   end
 
+  def skip_test_that_example_with_authors_is_valid_jats
+    schema = Nokogiri::XML::Schema(File.new(path_to('JATS-articleauthoring1.xsd')))
+    document = Nokogiri::XML(File.read('data/example-with-authors.jats'))
+    assert_empty schema.validate(document)
+  end
+
   private
 
   def path_to(filename)
