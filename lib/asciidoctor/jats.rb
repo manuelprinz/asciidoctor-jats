@@ -20,6 +20,23 @@ module Asciidoctor
         end
       end
 
+      def document(node)
+        result = []
+        root_tag_name = 'article'
+        result << %(<?xml version="1.0"?>)
+        result << %(<#{root_tag_name}>)
+        if node.header?
+          result << %(<article-meta>)
+          result << %(<title-group>)
+          result << %(<article-title>#{node.doctitle}</article-title>)
+          result << %(</title-group>)
+          result << %(</article-meta>)
+        end
+        result << node.content if node.blocks?
+        result << %(</#{root_tag_name}>)
+        result.join LF
+      end
+
       def embedded(node)
         node.content
       end
