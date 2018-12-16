@@ -25,7 +25,14 @@ module Asciidoctor
       end
 
       def inline_quoted(node)
-        %(<italic>#{node.text}</italic>)
+        case node.type
+        when :emphasis
+          %(<italic>#{node.text}</italic>)
+        when :strong
+          %(<bold>#{node.text}</bold>)
+        else
+          node.text
+        end
       end
 
       def paragraph(node)
