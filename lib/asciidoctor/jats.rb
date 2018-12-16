@@ -65,8 +65,10 @@ module Asciidoctor
       end
 
       def ulist(node)
+        attrs = {'list-type': 'bullet'}
         result = []
-        result << '<list list-type="bullet">'
+        attrs['id'] = node.id if node.id
+        result << tag_with_attrs('list', attrs)
         result << %(<title>#{node.title}</title>) if node.title?
         node.items.each do |item|
           result << '<list-item>'
@@ -75,6 +77,18 @@ module Asciidoctor
         end
         result << '</list>'
         result.join LF
+      end
+
+      private
+
+      def tag_with_attrs(tag, attrs = {})
+        result = []
+        result << %(<#{tag})
+        attrs.each do |key, value|
+          result << %(#{key}="#{value}")
+        end
+        result << '>'
+        result.join ' '
       end
     end
   end
