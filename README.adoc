@@ -49,7 +49,7 @@ Bug reports and pull requests are welcome on GitHub at {uri-project}.
 * https://jats.nlm.nih.gov/articleauthoring/tag-library/1.1/index.html[Article Authoring Tag Library, Version 1.1]
 * https://jats4r.org/[Jats for Reuse Project]
 * https://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/style.html[PMC Tagging Guidelines]
-* ftp://ftp.ncbi.nih.gov/pub/jats/articleauthoring/1.0/[W3C XML Schema files]
+* https://ftp.ncbi.nih.gov/pub/jats/articleauthoring/1.0/[W3C XML Schema files]
 
 == Authors
 
