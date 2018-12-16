@@ -60,12 +60,22 @@ module Asciidoctor
         end
       end
 
+      def olist(node)
+        render_list(node, 'order')
+      end
+
       def paragraph(node)
         %(<p>#{node.content}</p>)
       end
 
       def ulist(node)
-        attrs = {'list-type': 'bullet'}
+        render_list(node, 'bullet')
+      end
+
+      private
+
+      def render_list(node, list_type)
+        attrs = {'list-type': list_type}
         result = []
         attrs['id'] = node.id if node.id
         result << tag_with_attrs('list', attrs)
@@ -78,8 +88,6 @@ module Asciidoctor
         result << '</list>'
         result.join LF
       end
-
-      private
 
       def tag_with_attrs(tag, attrs = {})
         result = []
