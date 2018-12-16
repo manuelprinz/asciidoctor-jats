@@ -44,6 +44,18 @@ module Asciidoctor
       def paragraph(node)
         %(<p>#{node.content}</p>)
       end
+
+      def ulist(node)
+        result = []
+        result << '<list list-type="bullet">'
+        node.items.each do |item|
+          result << '<list-item>'
+          result << %(<p>#{item.text}</p>)
+          result << '</list-item>'
+        end
+        result << '</list>'
+        result.join LF
+      end
     end
   end
 end
