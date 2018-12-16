@@ -43,6 +43,7 @@ Bug reports and pull requests are welcome on GitHub at {uri-project}.
 == Resources
 
 * https://github.com/asciidoctor/asciidoctor/issues/1792[GitHub issue]
+* http://jats.niso.org/1.1/[ANSI/NISO Z39.96-2015: Journal Article Tag Suite (JATS)]
 * https://jats.nlm.nih.gov/[JATS Homepage]
 * https://jats.nlm.nih.gov/articleauthoring/[Article Authoring Tag Set (aka "Orange Set")]
 * https://jats.nlm.nih.gov/articleauthoring/tag-library/1.1/index.html[Article Authoring Tag Library, Version 1.1]
