@@ -10,3 +10,17 @@
     <p>Step 3</p>
   </list-item>
 </list>
+
+<!-- .with-title -->
+<list list-type="order">
+  <title>Steps</title>
+  <list-item>
+    <p>Step 1</p>
+  </list-item>
+  <list-item>
+    <p>Step 2</p>
+  </list-item>
+  <list-item>
+    <p>Step 3</p>
+  </list-item>
+</list>
