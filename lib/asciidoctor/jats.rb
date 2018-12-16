@@ -24,6 +24,10 @@ module Asciidoctor
         node.content
       end
 
+      def inline_quoted(node)
+        %(<italic>#{node.text}</italic>)
+      end
+
       def paragraph(node)
         %(<p>#{node.content}</p>)
       end
