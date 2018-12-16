@@ -24,12 +24,15 @@ module Asciidoctor
         node.content
       end
 
+      (QUOTE_TAGS = {
+        emphasis: 'italic',
+        strong: 'bold'
+      })
+
       def inline_quoted(node)
-        case node.type
-        when :emphasis
-          %(<italic>#{node.text}</italic>)
-        when :strong
-          %(<bold>#{node.text}</bold>)
+        tag = QUOTE_TAGS[node.type]
+        if tag
+          %(<#{tag}>#{node.text}</#{tag}>)
         else
           node.text
         end
