@@ -2,3 +2,8 @@
 <sec>
   <title>Section Level 1</title>
 </sec>
+
+<!-- .with-custom-id -->
+<sec id="foo">
+  <title>Section Title</title>
+</sec>

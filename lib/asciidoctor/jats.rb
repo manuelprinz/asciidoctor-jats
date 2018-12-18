@@ -74,7 +74,13 @@ module Asciidoctor
       end
 
       def section(node)
-        %(<sec><title>#{node.title}</title>#{node.content}</sec>)
+        result = []
+        attrs = {}
+        attrs['id'] = node.id unless node.id.start_with? '_'
+        result << tag_with_attrs('sec', attrs)
+        result << %(<title>#{node.title}</title>#{node.content})
+        result << %(</sec>)
+        result.join ' '
       end
 
       def ulist(node)
