@@ -37,7 +37,9 @@ module Asciidoctor
           result << %(</article-meta>)
           result << %(</front>)
         end
+        result << %(<body>)
         result << node.content if node.blocks?
+        result << %(</body>)
         result << %(</#{root_tag_name}>)
         result.join LF
       end
@@ -69,6 +71,10 @@ module Asciidoctor
 
       def paragraph(node)
         %(<p>#{node.content}</p>)
+      end
+
+      def section(node)
+        %(<sec><title>#{node.title}</title>#{node.content}</sec>)
       end
 
       def ulist(node)
