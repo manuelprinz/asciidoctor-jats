@@ -7,3 +7,23 @@
 <sec id="foo">
   <title>Section Title</title>
 </sec>
+
+<!-- .max-nesting -->
+<sec>
+  <title>Section Level 1</title>
+  <sec>
+    <title>Section Level 2</title>
+    <sec>
+      <title>Section Level 3</title>
+      <sec>
+        <title>Section Level 4</title>
+        <sec>
+          <title>Section Level 5</title>
+        </sec>
+      </sec>
+    </sec>
+  </sec>
+  <sec>
+    <title>Section Level 2</title>
+  </sec>
+</sec>
