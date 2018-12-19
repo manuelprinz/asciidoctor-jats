@@ -24,5 +24,6 @@ There are several projects that output XML:
 * Support for subtitle? -> supported in article meta-data
 * Is there an equivalent concept to Asciidoctor roles in JATS? How to convert those?
 ** HTML converter converts to classes.
+** Roles could be used to implement `named-concept` and similar tags.
 * JATS 1.0 does not support nested lists. Use 1.1 only? -> clarify status
 * `sidebar` could possibly be translated to `boxed-text`.
