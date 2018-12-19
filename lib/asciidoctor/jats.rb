@@ -20,11 +20,16 @@ module Asciidoctor
         end
       end
 
+      DOCUMENT_HEADER = <<~END_OF_HEADER
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Article Authoring DTD v1.0 20120330//EN"
+          "JATS-articleauthoring1.xsd">
+      END_OF_HEADER
+
       def document(node)
         result = []
         root_tag_name = 'article'
-        result << %(<?xml version="1.0" encoding="UTF-8"?>)
-        result << %(<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Article Authoring DTD v1.0 20120330//EN" "JATS-articleauthoring1.xsd">)
+        result << DOCUMENT_HEADER
         result << %(<#{root_tag_name}>)
         if node.header?
           result << %(<front>)
