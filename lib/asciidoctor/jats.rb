@@ -54,7 +54,7 @@ module Asciidoctor
         monospaced: 'monospace',
         superscript: 'sup',
         subscript: 'sub'
-      })
+      }.freeze)
 
       def inline_quoted(node)
         tag = QUOTE_TAGS[node.type]
