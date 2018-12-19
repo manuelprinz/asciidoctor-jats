@@ -95,13 +95,19 @@ module Asciidoctor
         attrs['id'] = node.id if node.id
         result << tag_with_attrs('list', attrs)
         result << %(<title>#{node.title}</title>) if node.title?
-        node.items.each do |item|
+        result << render_list_items(node.items)
+        result << '</list>'
+        result.join LF
+      end
+
+      def render_list_items(items)
+        result = []
+        items.each do |item|
           result << '<list-item>'
           result << %(<p>#{item.text}</p>)
           result << '</list-item>'
         end
-        result << '</list>'
-        result.join LF
+        result.join ''
       end
 
       def tag_with_attrs(tag, attrs = {})
