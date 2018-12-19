@@ -59,7 +59,7 @@ module Asciidoctor
       def inline_quoted(node)
         tag = QUOTE_TAGS[node.type]
         if tag
-          %(<#{tag}>#{node.text}</#{tag}>)
+          wrap(node.text, within: tag)
         else
           node.text
         end
@@ -70,7 +70,7 @@ module Asciidoctor
       end
 
       def paragraph(node)
-        %(<p>#{node.content}</p>)
+        wrap(node.content, within: :p)
       end
 
       def section(node)
@@ -78,7 +78,8 @@ module Asciidoctor
         attrs = {}
         attrs['id'] = node.id unless node.id.start_with? '_'
         result << tag_with_attrs('sec', attrs)
-        result << %(<title>#{node.title}</title>#{node.content})
+        result << wrap(node.title, within: 'title')
+        result << node.content
         result << %(</sec>)
         result.join ' '
       end
@@ -94,7 +95,7 @@ module Asciidoctor
         result = []
         attrs['id'] = node.id if node.id
         result << tag_with_attrs('list', attrs)
-        result << %(<title>#{node.title}</title>) if node.title?
+        result << wrap(node.title, within: :title) if node.title?
         result << render_list_items(node.items)
         result << '</list>'
         result.join LF
@@ -104,7 +105,7 @@ module Asciidoctor
         result = []
         items.each do |item|
           result << '<list-item>'
-          result << %(<p>#{item.text}</p>)
+          result << wrap(item.text, within: :p)
           result << '</list-item>'
         end
         result.join ''
@@ -118,6 +119,10 @@ module Asciidoctor
         end
         result << '>'
         result.join ' '
+      end
+
+      def wrap(content, within: '')
+        "<#{within}>#{content}</#{within}>"
       end
     end
   end
