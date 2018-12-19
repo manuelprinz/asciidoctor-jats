@@ -3,11 +3,6 @@
   <title>Section Level 1</title>
 </sec>
 
-<!-- .with-custom-id -->
-<sec id="foo">
-  <title>Section Title</title>
-</sec>
-
 <!-- .max-nesting -->
 <sec>
   <title>Section Level 1</title>
@@ -26,4 +21,9 @@
   <sec>
     <title>Section Level 2</title>
   </sec>
+</sec>
+
+<!-- .with-custom-id -->
+<sec id="foo">
+  <title>Section Title</title>
 </sec>
