@@ -35,7 +35,7 @@ module Asciidoctor
           result << %(<front>)
           result << %(<article-meta>)
           result << %(<title-group>)
-          result << %(<article-title>#{node.doctitle}</article-title>)
+          result << wrap(node.doctitle, within: 'article-title')
           result << %(</title-group>)
           result << %(<contrib-group><contrib/></contrib-group>)
           result << %(<abstract/>)
