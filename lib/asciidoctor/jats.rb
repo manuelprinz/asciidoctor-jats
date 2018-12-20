@@ -34,9 +34,7 @@ module Asciidoctor
         if node.header?
           result << %(<front>)
           result << %(<article-meta>)
-          result << %(<title-group>)
-          result << wrap(node.doctitle, within: 'article-title')
-          result << %(</title-group>)
+          result << document_title(node.doctitle)
           result << %(<contrib-group><contrib/></contrib-group>)
           result << %(<abstract/>)
           result << %(</article-meta>)
@@ -94,6 +92,10 @@ module Asciidoctor
       end
 
       private
+
+      def document_title(title)
+        %(<title-group><article-title>#{title}</article-title></title-group>)
+      end
 
       def render_list(node, list_type)
         attrs = {'list-type': list_type}
