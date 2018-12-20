@@ -12,3 +12,7 @@
 
 <!-- .subscript -->
 <sub>sub</sub>chunky bacon
+
+<!-- .mixed-monospace-bold-italic -->
+<monospace><bold><italic>monospace bold italic phrase</italic></bold></monospace>
+  and le<monospace><bold><italic>tt</italic></bold></monospace>ers
