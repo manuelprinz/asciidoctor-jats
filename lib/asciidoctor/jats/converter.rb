@@ -74,7 +74,7 @@ module Asciidoctor
       end
 
       def paragraph(node)
-        wrap(node.content, within: :p)
+        Paragraph.new(node)
       end
 
       def section(node)
