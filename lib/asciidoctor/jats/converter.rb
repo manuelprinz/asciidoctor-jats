@@ -51,21 +51,8 @@ module Asciidoctor
         node.content
       end
 
-      (QUOTE_TAGS = {
-        emphasis: 'italic',
-        strong: 'bold',
-        monospaced: 'monospace',
-        superscript: 'sup',
-        subscript: 'sub'
-      }.freeze)
-
       def inline_quoted(node)
-        tag = QUOTE_TAGS[node.type]
-        if tag
-          wrap(node.text, within: tag)
-        else
-          node.text
-        end
+        Entity::Inline.for(node)
       end
 
       def olist(node)
