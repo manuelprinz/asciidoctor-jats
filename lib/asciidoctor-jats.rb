@@ -1,3 +1,6 @@
 require 'asciidoctor'
 require_relative 'asciidoctor/jats/converter'
+require_relative 'asciidoctor/jats/entity/emphasis'
+require_relative 'asciidoctor/jats/entity/paragraph'
+require_relative 'asciidoctor/jats/entity/strong'
 require_relative 'asciidoctor/jats/version'

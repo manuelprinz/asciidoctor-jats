@@ -1,4 +1,3 @@
-require 'asciidoctor/jats/entities'
 require 'asciidoctor/jats/version'
 
 module Asciidoctor
@@ -74,7 +73,7 @@ module Asciidoctor
       end
 
       def paragraph(node)
-        Paragraph.new(node)
+        Entity::Paragraph.new(node)
       end
 
       def section(node)
