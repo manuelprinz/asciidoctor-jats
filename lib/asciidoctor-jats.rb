@@ -1,4 +1,3 @@
-require 'asciidoctor'
 require 'asciidoctor/jats/converter'
 require 'asciidoctor/jats/entity/single_tag'
 require 'asciidoctor/jats/entity/emphasis'
