@@ -1,7 +1,7 @@
 require 'rspec'
 
 require 'asciidoctor'
-require 'asciidoctor/jats/entity/strong'
+require 'asciidoctor-jats'
 
 RSpec.describe Asciidoctor::JATS::Entity::Strong do
   context '#to_s' do

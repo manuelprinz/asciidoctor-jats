@@ -1,7 +1,7 @@
 require 'rspec'
 
 require 'asciidoctor'
-require 'asciidoctor/jats/entity/paragraph'
+require 'asciidoctor-jats'
 
 RSpec.describe Asciidoctor::JATS::Entity::Paragraph do
   context '#to_s' do
