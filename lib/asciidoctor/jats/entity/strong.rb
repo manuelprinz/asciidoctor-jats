@@ -1,19 +1,17 @@
 module Asciidoctor
   module JATS
     module Entity
-      class Strong
-        attr_reader :text
-
+      class Strong < SingleTag
         def initialize(node)
           @text = node.text
         end
 
-        def to_s
-          if text.empty?
-            ''
-          else
-            "<bold>#{text}</bold>"
-          end
+        def tag_name
+          'bold'
+        end
+
+        def content
+          @text
         end
       end
     end

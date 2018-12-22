@@ -1,15 +1,15 @@
 module Asciidoctor
   module JATS
     module Entity
-      class Paragraph
-        attr_reader :content
-
+      class Paragraph < SingleTag
         def initialize(node)
           @content = node.content
         end
 
-        def to_s
-          "<p>#{content}</p>"
+        attr_reader :content
+
+        def tag_name
+          'p'
         end
       end
     end
