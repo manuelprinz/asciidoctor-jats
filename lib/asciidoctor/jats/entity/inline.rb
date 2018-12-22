@@ -5,18 +5,18 @@ module Asciidoctor
         def self.for(node)
           case node.type
           when :emphasis
-            Emphasis.new(node)
+            Emphasis
           when :strong
-            Strong.new(node)
+            Strong
           when :monospaced
-            Monospace.new(node)
+            Monospace
           when :superscript
-            Superscript.new(node)
+            Superscript
           when :subscript
-            Subscript.new(node)
+            Subscript
           else
-            NoEntity.new(node)
-          end
+            NoEntity
+          end.new(node)
         end
       end
     end
