@@ -20,12 +20,6 @@ module Asciidoctor
         end
       end
 
-      DOCUMENT_HEADER = <<~END_OF_HEADER
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Article Authoring DTD v1.0 20120330//EN"
-          "JATS-articleauthoring1.xsd">
-      END_OF_HEADER
-
       def document(node)
         # This needs explicit conversion to String as Nokogiri tries to send messages to it
         Entity::Document.new(node).to_s
@@ -53,12 +47,6 @@ module Asciidoctor
 
       def ulist(node)
         Entity::List.new(node, :bullet)
-      end
-
-      private
-
-      def document_title(title)
-        %(<title-group><article-title>#{title}</article-title></title-group>)
       end
     end
   end
