@@ -64,14 +64,7 @@ module Asciidoctor
       end
 
       def section(node)
-        result = []
-        attrs = {}
-        attrs['id'] = node.id unless node.id.start_with? '_'
-        result << tag_with_attrs('sec', attrs)
-        result << wrap(node.title, within: 'title')
-        result << node.content
-        result << %(</sec>)
-        result.join ' '
+        Entity::Section.new(node)
       end
 
       def ulist(node)
