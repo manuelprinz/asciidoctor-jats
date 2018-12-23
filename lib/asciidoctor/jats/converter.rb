@@ -27,24 +27,8 @@ module Asciidoctor
       END_OF_HEADER
 
       def document(node)
-        result = []
-        root_tag_name = 'article'
-        result << DOCUMENT_HEADER
-        result << %(<#{root_tag_name}>)
-        if node.header?
-          result << %(<front>)
-          result << %(<article-meta>)
-          result << document_title(node.doctitle)
-          result << %(<contrib-group><contrib/></contrib-group>)
-          result << %(<abstract/>)
-          result << %(</article-meta>)
-          result << %(</front>)
-        end
-        result << %(<body>)
-        result << node.content if node.blocks?
-        result << %(</body>)
-        result << %(</#{root_tag_name}>)
-        result.join LF
+        # This needs explicit conversion to String as Nokogiri tries to send messages to it
+        Entity::Document.new(node).to_s
       end
 
       def embedded(node)
