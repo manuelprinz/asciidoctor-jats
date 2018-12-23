@@ -84,27 +84,6 @@ module Asciidoctor
         %(<title-group><article-title>#{title}</article-title></title-group>)
       end
 
-      def render_list(node, list_type)
-        attrs = {'list-type': list_type}
-        result = []
-        attrs['id'] = node.id if node.id
-        result << tag_with_attrs('list', attrs)
-        result << wrap(node.title, within: :title) if node.title?
-        result << render_list_items(node.items)
-        result << '</list>'
-        result.join LF
-      end
-
-      def render_list_items(items)
-        result = []
-        items.each do |item|
-          result << '<list-item>'
-          result << wrap(item.text, within: :p)
-          result << '</list-item>'
-        end
-        result.join ''
-      end
-
       def tag_with_attrs(tag, attrs = {})
         result = []
         result << %(<#{tag})
