@@ -1,5 +1,7 @@
 require 'asciidoctor/jats/converter'
 require 'asciidoctor/jats/entity/single_tag'
+require 'asciidoctor/jats/entity/article'
+require 'asciidoctor/jats/entity/document'
 require 'asciidoctor/jats/entity/emphasis'
 require 'asciidoctor/jats/entity/inline'
 require 'asciidoctor/jats/entity/list'
