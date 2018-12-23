@@ -56,7 +56,7 @@ module Asciidoctor
       end
 
       def olist(node)
-        render_list(node, 'order')
+        Entity::List.new(node, :order)
       end
 
       def paragraph(node)
@@ -75,7 +75,7 @@ module Asciidoctor
       end
 
       def ulist(node)
-        render_list(node, 'bullet')
+        Entity::List.new(node, :bullet)
       end
 
       private
