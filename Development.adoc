@@ -25,5 +25,6 @@ There are several projects that output XML:
 * Is there an equivalent concept to Asciidoctor roles in JATS? How to convert those?
 ** HTML converter converts to classes.
 ** Roles could be used to implement `named-concept` and similar tags.
+* Convert marked inline text to `named-concept`? -> JATS does not seem to have the concept of marks.
 * JATS 1.0 does not support nested lists. Use 1.1 only? -> clarify status
 * `sidebar` could possibly be translated to `boxed-text`.
