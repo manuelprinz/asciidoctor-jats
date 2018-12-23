@@ -76,20 +76,6 @@ module Asciidoctor
       def document_title(title)
         %(<title-group><article-title>#{title}</article-title></title-group>)
       end
-
-      def tag_with_attrs(tag, attrs = {})
-        result = []
-        result << %(<#{tag})
-        attrs.each do |key, value|
-          result << %(#{key}="#{value}")
-        end
-        result << '>'
-        result.join ' '
-      end
-
-      def wrap(content, within: '')
-        "<#{within}>#{content}</#{within}>"
-      end
     end
   end
 end
