@@ -45,8 +45,8 @@ Due to limitations of the JATS format not all features of Asciidoc(tor) will or 
 The list of available features include:
 
 * *General document structure*: Headings are converted to sections.
-  JATS does not support "levels" for nesting sections, so skipping a level (e.g. using `===` without `==`) might lead
-   to a ill-formed document.
+  JATS does not support "levels" sections. This is implemented by nesting sections, so skipping a level
+   (e.g. using `===` without `==`) might lead to a ill-formed document.
 * *Inline markup*: Bold, italic, and monospace text will be translated. Also will super- and sub-scripts.
 * *Lists*: Ordered and unordered lists will be translated, but will not keep the numberings as defined.
 
