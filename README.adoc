@@ -35,6 +35,21 @@ Documents in JATS can support the publishing process by providing a file format 
 By Asciidoctor's philosophy to _separate content from form_ the article can be output to any format, allowing for a
  higher re-use due to publishing the work in multiple formats.
 
+== What works? What doesn't?
+
+Currently only a small subset of functionality is implemented.
+Due to limitations of the JATS format not all features of Asciidoc(tor) will or can be implemented.
+(To help with prioritizing the implementation of missing features please {uri-project-issues}[open an issue]
+  and/or up-vote existing ones.)
+
+The list of available features include:
+
+* *General document structure*: Headings are converted to sections.
+  JATS does not support "levels" for nesting sections, so skipping a level (e.g. using `===` without `==`) might lead
+   to a ill-formed document.
+* *Inline markup*: Bold, italic, and monospace text will be translated. Also will super- and sub-scripts.
+* *Lists*: Ordered and unordered lists will be translated, but will not keep the numberings as defined.
+
 == Contributing
 
 Bug reports and pull requests are welcome on GitHub at {uri-project}.
