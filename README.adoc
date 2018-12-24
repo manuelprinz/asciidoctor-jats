@@ -22,6 +22,7 @@ Other tag sets, namely _Archiving and Interchange_ and _Journal Publishing_, are
 
 [caption=Status]
 CAUTION: {project-name} is currently _in development_. It does little more than nothing.
+ To see what is implemented, regularly check the <<features,feature list>>.
 
 toc::[]
 
@@ -35,6 +36,7 @@ Documents in JATS can support the publishing process by providing a file format 
 By Asciidoctor's philosophy to _separate content from form_ the article can be output to any format, allowing for a
  higher re-use due to publishing the work in multiple formats.
 
+[[features]]
 == What works? What doesn't?
 
 Currently only a small subset of functionality is implemented.
