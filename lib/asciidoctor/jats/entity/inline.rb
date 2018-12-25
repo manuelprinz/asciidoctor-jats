@@ -15,7 +15,7 @@ module Asciidoctor
           when :subscript
             Subscript
           else
-            NoEntity
+            Content
           end.new(node)
         end
       end

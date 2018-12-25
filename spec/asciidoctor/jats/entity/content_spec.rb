@@ -3,7 +3,7 @@ require 'rspec'
 require 'asciidoctor'
 require 'asciidoctor-jats'
 
-RSpec.describe Asciidoctor::JATS::Entity::NoEntity do
+RSpec.describe Asciidoctor::JATS::Entity::Content do
   context '#to_s' do
     it 'should return a word as is' do
       actual = build('Example').to_s

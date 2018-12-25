@@ -30,9 +30,9 @@ RSpec.describe Asciidoctor::JATS::Entity::Inline do
       expect(actual).to be_a(Asciidoctor::JATS::Entity::Subscript)
     end
 
-    it 'should return +NoEntity+ class for unknown text' do
+    it 'should return +Content+ class for unknown text' do
       actual = described_class.for(node_of_type(:unsupported_tag))
-      expect(actual).to be_a(Asciidoctor::JATS::Entity::NoEntity)
+      expect(actual).to be_a(Asciidoctor::JATS::Entity::Content)
     end
   end
 

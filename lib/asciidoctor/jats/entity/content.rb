@@ -1,7 +1,7 @@
 module Asciidoctor
   module JATS
     module Entity
-      class NoEntity
+      class Content
         def initialize(node)
           @node = node
         end
