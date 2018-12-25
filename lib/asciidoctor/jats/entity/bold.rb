@@ -1,7 +1,7 @@
 module Asciidoctor
   module JATS
     module Entity
-      class Strong < SingleTag
+      class Bold < SingleTag
         def initialize(node)
           @text = node.text
         end

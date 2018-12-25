@@ -5,9 +5,9 @@ module Asciidoctor
         def self.for(node)
           case node.type
           when :emphasis
-            Emphasis
+            Italic
           when :strong
-            Strong
+            Bold
           when :monospaced
             Monospace
           when :superscript

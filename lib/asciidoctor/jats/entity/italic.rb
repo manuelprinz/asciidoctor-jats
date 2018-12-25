@@ -1,7 +1,7 @@
 module Asciidoctor
   module JATS
     module Entity
-      class Emphasis < SingleTag
+      class Italic < SingleTag
         def initialize(node)
           @text = node.text
         end

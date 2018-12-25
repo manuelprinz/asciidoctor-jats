@@ -7,12 +7,12 @@ RSpec.describe Asciidoctor::JATS::Entity::Inline do
   context '.for' do
     it 'should return +Emphasis+ class for emphasized text' do
       actual = described_class.for(node_of_type(:emphasis))
-      expect(actual).to be_a(Asciidoctor::JATS::Entity::Emphasis)
+      expect(actual).to be_a(Asciidoctor::JATS::Entity::Italic)
     end
 
     it 'should return +Strong+ class for strong text' do
       actual = described_class.for(node_of_type(:strong))
-      expect(actual).to be_a(Asciidoctor::JATS::Entity::Strong)
+      expect(actual).to be_a(Asciidoctor::JATS::Entity::Bold)
     end
 
     it 'should return +Monospace+ class for monospaced text' do

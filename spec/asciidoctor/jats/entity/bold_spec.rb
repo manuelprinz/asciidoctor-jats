@@ -3,7 +3,7 @@ require 'rspec'
 require 'asciidoctor'
 require 'asciidoctor-jats'
 
-RSpec.describe Asciidoctor::JATS::Entity::Strong do
+RSpec.describe Asciidoctor::JATS::Entity::Bold do
   context '#to_s' do
     it 'should wrap a word in <bold> tags' do
       actual = build_strong('Example').to_s

@@ -3,7 +3,7 @@ require 'rspec'
 require 'asciidoctor'
 require 'asciidoctor-jats'
 
-RSpec.describe Asciidoctor::JATS::Entity::Emphasis do
+RSpec.describe Asciidoctor::JATS::Entity::Italic do
   context '#to_s' do
     it 'should wrap a word in <italic> tags' do
       actual = build_emphasis('Example').to_s
