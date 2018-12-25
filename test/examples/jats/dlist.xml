@@ -1,0 +1,18 @@
+<!-- .basic -->
+<def-list>
+  <def-item>
+    <term>Asciidoctor</term>
+    <def>
+      <p>An implementation of the AsciiDoc processor in Ruby.</p>
+    </def>
+  </def-item>
+  <def-item>
+    <term>Asciidoc</term>
+    <def>
+      <p>
+        A text document format for writing notes, documentation, articles, books,
+        ebooks, slideshows, web pages, man pages and blogs.
+      </p>
+    </def>
+  </def-item>
+</def-list>

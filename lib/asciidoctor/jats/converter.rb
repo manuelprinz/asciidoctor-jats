@@ -21,6 +21,10 @@ module Asciidoctor
         end
       end
 
+      def dlist(node)
+        Entity::DefList.new(node)
+      end
+
       def document(node)
         # This needs explicit conversion to String as Nokogiri tries to send messages to it
         Entity::Document.new(node).to_s
