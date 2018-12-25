@@ -1,3 +1,4 @@
+require 'asciidoctor'
 require 'asciidoctor/jats/version'
 
 module Asciidoctor
