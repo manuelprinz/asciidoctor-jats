@@ -16,3 +16,13 @@
     </def>
   </def-item>
 </def-list>
+
+<!-- .basic-with-title -->
+<def-list>
+  <title>Asciidoctor</title>
+  <def-item>
+    <term>License</term>
+    <def>
+      <p>MIT</p>
+    </def>
+</def-item>

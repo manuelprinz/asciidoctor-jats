@@ -9,7 +9,7 @@ module Asciidoctor
         attr_reader :node
 
         def to_s
-          %(<def-list>#{list_items}</def-list>)
+          %(<def-list>#{title}#{list_items}</def-list>)
         end
 
         private
@@ -23,6 +23,10 @@ module Asciidoctor
             result << '</def-item>'
           end
           result.join LF
+        end
+
+        def title
+          node.title? ? "<title>#{node.title}</title>" : ''
         end
       end
     end
