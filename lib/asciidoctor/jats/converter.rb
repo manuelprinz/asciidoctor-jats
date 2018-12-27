@@ -47,7 +47,7 @@ module Asciidoctor
       end
 
       def paragraph(node)
-        Entity::Paragraph.new(node)
+        Entity::Paragraph.new(content: node.content)
       end
 
       def section(node)

@@ -2,8 +2,8 @@ module Asciidoctor
   module JATS
     module Entity
       class Paragraph < SingleTag
-        def initialize(node)
-          @content = node.content
+        def initialize(content:)
+          @content = content
         end
 
         attr_reader :content

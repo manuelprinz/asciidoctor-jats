@@ -21,7 +21,7 @@ RSpec.describe Asciidoctor::JATS::Entity::Paragraph do
 
     def build_paragraph(text)
       node = Asciidoctor::Block.new(nil, :paragraph, source: text)
-      described_class.new(node)
+      described_class.new(content: node.content)
     end
   end
 end
