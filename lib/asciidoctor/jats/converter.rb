@@ -34,6 +34,10 @@ module Asciidoctor
         node.content
       end
 
+      def inline_footnote(node)
+        Entity::Footnote.new(node)
+      end
+
       def inline_quoted(node)
         Entity::Inline.for(node)
       end
