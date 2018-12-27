@@ -9,7 +9,7 @@ module Asciidoctor
         attr_reader :node
 
         def to_s
-          %(<fn><p>#{node.text}</p></fn>)
+          %(<fn>#{Paragraph.new(content: node.text)}</fn>)
         end
       end
     end

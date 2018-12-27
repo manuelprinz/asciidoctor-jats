@@ -9,7 +9,7 @@ module Asciidoctor
         attr_reader :node
 
         def content
-          %(<p>#{node.text}</p>)
+          Paragraph.new(content: node.text)
         end
 
         def tag_name

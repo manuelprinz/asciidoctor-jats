@@ -22,7 +22,7 @@ module Asciidoctor
         end
 
         def list_items
-          node.items.map { |item| "<list-item><p>#{item.text}</p></list-item>" }.join('')
+          node.items.map { |item| "<list-item>#{Paragraph.new(content: item.text)}</list-item>" }.join('')
         end
 
         def to_s
