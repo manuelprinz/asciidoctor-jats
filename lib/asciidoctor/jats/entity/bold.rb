@@ -9,14 +9,14 @@ module Asciidoctor
           @text = node.text
         end
 
-        # @return [String] the tag +<bold>+
-        def tag_name
-          'bold'
-        end
-
         # @return [] the text of the block
         def content
           @text
+        end
+
+        # @return [String] the tag +<bold>+
+        def tag_name
+          'bold'
         end
       end
     end
