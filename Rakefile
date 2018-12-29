@@ -5,7 +5,7 @@ require 'yard'
 require 'asciidoctor/doctest'
 require 'asciidoctor-jats'
 
-Rake::TestTask.new(:test) do |t|
+Rake::TestTask.new(:minitest) do |t|
   t.libs << 'test'
   t.libs << 'lib'
   t.test_files = FileList['test/**/*_test.rb']
@@ -26,4 +26,4 @@ end
 
 YARD::Rake::YardocTask.new
 
-task default: :test
+task default: :minitest
