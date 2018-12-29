@@ -1,5 +1,6 @@
 require 'bundler/gem_tasks'
 require 'rake/testtask'
+require 'rspec/core/rake_task'
 require 'yard'
 
 require 'asciidoctor/doctest'
@@ -23,6 +24,8 @@ DocTest::RakeTasks.new(:doctest) do |t|
     converter: Asciidoctor::JATS::Converter,
   }
 end
+
+RSpec::Core::RakeTask.new(:spec)
 
 YARD::Rake::YardocTask.new
 
