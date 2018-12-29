@@ -29,4 +29,6 @@ RSpec::Core::RakeTask.new(:spec)
 
 YARD::Rake::YardocTask.new
 
+task test: %i[minitest spec doctest]
+
 task default: :minitest
