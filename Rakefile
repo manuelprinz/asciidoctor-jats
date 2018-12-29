@@ -31,4 +31,4 @@ YARD::Rake::YardocTask.new
 
 task test: %i[minitest spec doctest]
 
-task default: :minitest
+task default: :test
