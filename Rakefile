@@ -1,5 +1,6 @@
 require 'bundler/gem_tasks'
 require 'rake/testtask'
+require 'yard'
 
 require 'asciidoctor/doctest'
 require 'asciidoctor-jats'
@@ -22,5 +23,7 @@ DocTest::RakeTasks.new(:doctest) do |t|
     converter: Asciidoctor::JATS::Converter,
   }
 end
+
+YARD::Rake::YardocTask.new
 
 task default: :test
